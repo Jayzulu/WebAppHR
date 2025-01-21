@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offboarding Progress Report</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="images/logohau.jpg" alt="Logo">
+        </div>
+        <h2>Dashboard</h2>
+        <a href="home.html">Home</a>
+        <a href="Onboarding.html">Onboarding</a>
+        <a href="offboardning.html">Offboarding</a>
+        <a href="employee.html">Employee Information</a>
+        <div class="dropdown">
+            <a href="#">Dashboard</a>
+            <div class="dropdown-content">
+                <a href="oa.html">Onboarding Analytics</a>
+                <a href="offa.html">Offboarding Analytics</a>
+                <a href="distribution.html">Employee Distribution</a>
+                <a href="recommend.html">Recommendatory</a>
+                <a href="evaluation.html">Evaluation</a>
+                <a href="onboardingprogress.html">Onboarding Report</a>
+                <a href="offboardingprogress.html" class="active">Offboarding Report</a>
+                <a href="auditreport.html">Audit Logs Report</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Offboarding Progress Report</h1>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Effective Offboarding Date</th>
+                        <th>Exit Interview Status</th>
+                        <th>Clearance Status</th>
+                        <th>Certification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Robert Junior</td>
+                        <td>January 20, 2024</td>
+                        <td>Completed</td>
+                        <td>Completed</td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td>Tony Stark</td>
+                        <td>December 16, 2024</td>
+                        <td>Completed</td>
+                        <td>Pending</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

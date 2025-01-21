@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendatory</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="images/logohau.jpg" alt="Logo">
+        </div>
+        <h2>Dashboard</h2>
+        <a href="home.html">Home</a>
+        <a href="Onboarding.html">Onboarding</a>
+        <a href="offboardning.html">Offboarding</a>
+        <a href="employee.html">Employee Information</a>
+        <div class="dropdown">
+            <a href="#" class="active">Dashboard</a>
+            <div class="dropdown-content">
+                <a href="oa.html">Onboarding Analytics</a>
+                <a href="offa.html">Offboarding Analytics</a>
+                <a href="distribution.html">Employee Distribution</a>
+                <a href="recommend.html">Recommendatory</a>
+                <a href="evaluation.html">Evaluation</a>
+                <a href="onboardingprogress.html">Onboarding Report</a>
+                <a href="offboardingprogress.html">Offboarding Report</a>
+                <a href="auditreport.html">Audit Logs Report</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Recommendatory Analytics Overview</h1>
+
+        <div class="chart-container">
+            <div class="chart" id="taskCompletionRate">Task Completion Chart</div>
+            <div class="chart" id="issuesIdentified">Issues Identified Chart</div>
+        </div>
+
+        <div class="action-plan">
+            <h2>Action Plan</h2>
+            <ul>
+                <li>Implement automated notifications for incomplete tasks.</li>
+                <li>Assign an HR staff member to monitor new hires' onboarding progress.</li>
+                <li>Streamline document submission using an online upload system.</li>
+                <li>Evaluate the system every month to ensure effectiveness.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show');
+        }
+
+        // Adjusted code for initializing the charts
+        const taskCompletionCtx = document.createElement('canvas');
+        document.getElementById('taskCompletionRate').appendChild(taskCompletionCtx);
+        new Chart(taskCompletionCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Completed', 'Delayed'],
+                datasets: [{
+                    data: [80, 20],
+                    backgroundColor: ['#4CAF50', '#FF5722']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // Allows fixed height and width
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+
+        const issuesIdentifiedCtx = document.createElement('canvas');
+        document.getElementById('issuesIdentified').appendChild(issuesIdentifiedCtx);
+        new Chart(issuesIdentifiedCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Missing Documents', 'Incomplete Submission', 'Clearance Forms'],
+                datasets: [{
+                    data: [60, 30, 20],
+                    backgroundColor: ['#FF9800', '#03A9F4', '#9C27B0']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

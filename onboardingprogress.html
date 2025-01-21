@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding Progress Report</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="images/logohau.jpg" alt="Logo">
+        </div>
+        <h2>Dashboard</h2>
+        <a href="home.html">Home</a>
+        <a href="Onboarding.html">Onboarding</a>
+        <a href="offboardning.html">Offboarding</a>
+        <a href="employee.html">Employee Information</a>
+        <div class="dropdown">
+            <a href="#">Dashboard</a>
+            <div class="dropdown-content">
+                <a href="oa.html">Onboarding Analytics</a>
+                <a href="offa.html">Offboarding Analytics</a>
+                <a href="distribution.html">Employee Distribution</a>
+                <a href="recommend.html">Recommendatory</a>
+                <a href="evaluation.html">Evaluation</a>
+                <a href="onboardingprogress.html" class="active">Onboarding Report</a>
+                <a href="offboardingprogress.html">Offboarding Report</a>
+                <a href="auditreport.html">Audit Logs Report</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Onboarding Progress Report</h1>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Onboarding Start Date</th>
+                        <th>Completed Task</th>
+                        <th>Pending Task</th>
+                        <th>Automated Notification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Juan T. Pedro</td>
+                        <td>July 20, 2024</td>
+                        <td>Orientation</td>
+                        <td>Contract</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Juan A. Salasar</td>
+                        <td>September 16, 2024</td>
+                        <td>Orientation</td>
+                        <td>Contract</td>
+                        <td>No</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

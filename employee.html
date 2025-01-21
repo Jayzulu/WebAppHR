@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/logohau.jpg" alt="HR Department Logo">
+        </div>
+        <div class="links">
+            <a href="home.html">Home</a>
+            <a href="onboardingprogress.html">Onboarding</a>
+            <a href="#">Offboarding</a>
+            <a href="employee.html"class="active">Employee Information</a>
+            <a href="#">Dashboard</a>
+        </div>
+        <div class="profile">
+            <span>User</span>
+            <img src="images/manager.png" alt="Profile">
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Employee Information</h1>
+
+        <div class="search">
+            <input type="text" placeholder="Search Employees" oninput="searchEmployee(this.value)">
+        </div>
+
+        <table class="info-table">
+            <tr>
+                <td rowspan="3" style="text-align: center;">
+                    <img src="images/employ.png" alt="Profile Picture">
+                    <p>Cheena Maxine</p>
+                </td>
+                <td><strong>Contact Number:</strong> 12345678910</td>
+                <td><strong>Email:</strong> chichi123@gmail.com</td>
+            </tr>
+            <tr>
+                <td><strong>Department:</strong> School of Computing</td>
+                <td><strong>Location:</strong> Hybrid</td>
+            </tr>
+            <tr>
+                <td><strong>Employment Type:</strong> Full-Time</td>
+                <td><strong>Status:</strong> Active</td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Date Hired:</strong> July 20, 2024</td>
+                <td><strong>Document Submitted:</strong> Resume, Contract</td>
+            </tr>
+        </table>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="#" class="button">Edit Information</a>
+            <a href="#" class="button">View Details</a>
+        </div>
+    </div>
+
+    <script>
+        function searchEmployee(query) {
+            alert('Search feature triggered for: ' + query);
+        }
+    </script>
+
+</body>
+</html>
